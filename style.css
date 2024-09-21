@@ -1,0 +1,24 @@
+.kocka{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: grab;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.kocka:hover{
+    background-color: #EBEBEB;
+}
+
+.kocka p{
+    margin: auto;
+}
+
+.jatekter{
+    display: grid;
+    grid-template-columns: repeat(3, 51px);
+    grid-template-rows: repeat(3, 51px);
+}
