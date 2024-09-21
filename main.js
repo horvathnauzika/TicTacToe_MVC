@@ -1,4 +1,4 @@
-import Controller from "./controller/controller.js";
+import Controller from "./controller/kontroller.js";
 $(function () {
   //ez a program belépési pontja
   new Controller(); 
