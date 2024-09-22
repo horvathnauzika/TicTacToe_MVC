@@ -22,3 +22,8 @@
     grid-template-columns: repeat(3, 51px);
     grid-template-rows: repeat(3, 51px);
 }
+
+.winner{
+    border: 2px solid #39e7e7;
+    background-color: #def8f0;
+}
