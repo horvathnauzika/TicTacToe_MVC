@@ -1,7 +1,7 @@
 class Model{
 
     #lista=[];
-    #szimbolum = "❌"
+    #szimbolum = "X"
     #vegeVan = false;
     constructor(){
         this.#lista=[" "," "," "," "," "," "," "," "," ",];
@@ -13,12 +13,12 @@ class Model{
         }
         this.#lista[i] = this.#szimbolum; /* beírjuk a listába a szimbólumot*/
         let visszateres = this.#szimbolum;
-        if(this.#szimbolum==="❌"){
-            this.#szimbolum="🟢"; /* Léptetjük a szimbólumot */
-            console.log("🟢 játékos következik")
+        if(this.#szimbolum==="X"){
+            this.#szimbolum="O"; /* Léptetjük a szimbólumot */
+            console.log("O játékos következik")
         }
-        else{this.#szimbolum="❌" /* Léptetjük a szimbólumot*/
-            console.log("❌ játékos következik")
+        else{this.#szimbolum="X" /* Léptetjük a szimbólumot*/
+            console.log("X játékos következik")
         }
         return visszateres;
     }
@@ -49,7 +49,7 @@ class Model{
     }
 
     dontentetlenE(){
-        if(!this.nyertE() && !this.#lista.includes(" ")){
+        if(this.nyertE().length == 0 && !this.#lista.includes(" ")){
             this.#vegeVan = true;
             return true;
         }
@@ -58,6 +58,10 @@ class Model{
 
     getvegeVan(){
         return this.#vegeVan;
+    }
+
+    getSzimbolum(){
+        return this.#szimbolum;
     }
 }
 export default Model;
